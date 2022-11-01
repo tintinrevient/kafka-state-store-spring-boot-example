@@ -28,6 +28,7 @@ Go to http://localhost:8090/count/this, and also `27` will be shown.
 ## References
 
 * https://spring.io/blog/2019/12/09/stream-processing-with-spring-cloud-stream-and-apache-kafka-streams-part-6-state-stores-and-interactive-queries
+* https://kafka.apache.org/10/documentation/streams/developer-guide/interactive-queries.html
 * https://www.baeldung.com/spring-kafka
 * https://developer.confluent.io/learn-kafka/spring/hands-on-process-messages-with-kafka-streams/
 * https://github.com/confluentinc/demo-scene
