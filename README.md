@@ -1,4 +1,4 @@
-# Kafka Spring Boot Example with State Store
+# Kafka State Store Spring Boot Example 
 
 ## How to run
 
