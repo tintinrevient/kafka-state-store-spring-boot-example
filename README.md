@@ -37,7 +37,7 @@ Go to http://localhost:8090/count/this, and also `27` will be shown.
 * https://github.com/tonyzampogna/kafka-state-store-example
 * https://docs.confluent.io/platform/current/clients/consumer.html
 * https://kafka.apache.org/documentation/streams/developer-guide/processor-api.html
-* https://kafka.apache.org/documentation/streams/developer-guide/interactive-queries.html
 * https://kafka.apache.org/documentation/streams/developer-guide/running-app.html
 * https://kafka.apache.org/documentation/streams/developer-guide/testing.html
 * https://kafka.apache.org/documentation.html
+* https://docs.confluent.io/platform/current/streams/code-examples.html#java
