@@ -24,3 +24,19 @@ received = 27 with key this
 ## How to check result
 
 Go to http://localhost:8090/count/this, and also `27` will be shown.
+
+## References
+
+* https://spring.io/blog/2019/12/09/stream-processing-with-spring-cloud-stream-and-apache-kafka-streams-part-6-state-stores-and-interactive-queries
+* https://www.baeldung.com/spring-kafka
+* https://developer.confluent.io/learn-kafka/spring/hands-on-process-messages-with-kafka-streams/
+* https://github.com/confluentinc/demo-scene
+* https://medium.com/bakdata/queryable-kafka-topics-with-kafka-streams-8d2cca9de33f
+* https://github.com/bakdata/kafka-key-value-store
+* https://github.com/tonyzampogna/kafka-state-store-example
+* https://docs.confluent.io/platform/current/clients/consumer.html
+* https://kafka.apache.org/documentation/streams/developer-guide/processor-api.html
+* https://kafka.apache.org/documentation/streams/developer-guide/interactive-queries.html
+* https://kafka.apache.org/documentation/streams/developer-guide/running-app.html
+* https://kafka.apache.org/documentation/streams/developer-guide/testing.html
+* https://kafka.apache.org/documentation.html
