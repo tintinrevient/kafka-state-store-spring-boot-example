@@ -9,7 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.annotation.EnableKafkaStreams;
 import org.springframework.kafka.config.TopicBuilder;
-
+import org.apache.kafka.streams.state.KeyValueBytesStoreSupplier;
+import org.apache.kafka.streams.state.Stores;
 
 @SpringBootApplication
 @EnableKafkaStreams
@@ -29,4 +30,8 @@ public class App {
         return TopicBuilder.name("streams-wordcount-output").partitions(3).replicas(1).build();
     }
 
+    @Bean
+    KeyValueBytesStoreSupplier storeSupplier() {
+        return Stores.inMemoryKeyValueStore("in-memory-counts");
+    }
 }

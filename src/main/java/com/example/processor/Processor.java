@@ -4,6 +4,7 @@ import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.*;
+import org.apache.kafka.streams.state.KeyValueBytesStoreSupplier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,9 @@ import java.util.Arrays;
 
 @Component
 public class Processor {
+
+    @Autowired
+    private KeyValueBytesStoreSupplier storeSupplier;
 
     @Autowired
     public void process(StreamsBuilder builder) {
@@ -40,6 +44,13 @@ public class Processor {
 
         // Convert the `KTable<String, Long>` into a `KStream<String, Long>` and write to the output topic.
         wordCounts.toStream().to("streams-wordcount-output", Produced.with(stringSerde, longSerde));
+
+        KTable<String, Long> results = builder.table(
+                "streams-wordcount-output",
+                Materialized.<String, Long>as(storeSupplier)
+                        .withKeySerde(Serdes.String())
+                        .withValueSerde(Serdes.Long())
+        );
 
     }
 
